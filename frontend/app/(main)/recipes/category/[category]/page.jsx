@@ -10,7 +10,7 @@ export default function CategoryRecipesPage(){
     return (
         <RecipeGrid 
         type="category"
-        category={category}
+        value={category}
         fetchAction={getMealsByCategory}
         backLink="/dashboard"
         />
