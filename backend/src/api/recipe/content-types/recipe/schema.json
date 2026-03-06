@@ -59,12 +59,12 @@
       "type": "json",
       "required": true
     },
-    "instuctions": {
+    "instructions": {
       "type": "json",
       "required": true
     },
     "imageUrl": {
-      "type": "string"
+      "type": "text"
     },
     "isPublic": {
       "type": "boolean",

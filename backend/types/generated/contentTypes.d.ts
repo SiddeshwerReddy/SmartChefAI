@@ -550,9 +550,9 @@ export interface ApiRecipeRecipe extends Struct.CollectionTypeSchema {
       ]
     >;
     description: Schema.Attribute.Blocks;
-    imageUrl: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.Text;
     ingredients: Schema.Attribute.JSON & Schema.Attribute.Required;
-    instuctions: Schema.Attribute.JSON & Schema.Attribute.Required;
+    instructions: Schema.Attribute.JSON & Schema.Attribute.Required;
     isPublic: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
