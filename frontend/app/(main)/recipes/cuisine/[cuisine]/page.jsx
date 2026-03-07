@@ -6,7 +6,7 @@ import RecipeGrid from "@/components/RecipeGrid"
 
 export default function CuisineRecipesPage(){
     const params=useParams();
-    const category=params.category;
+    const cuisine=params.cuisine;
     return (
         <RecipeGrid 
         type="cuisine"
