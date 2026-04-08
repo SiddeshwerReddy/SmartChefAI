@@ -2,8 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { neobrutalism } from "@clerk/themes";
-import Image from "next/image";
 import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,28 +24,13 @@ export default function RootLayout({ children }) {
         {/* <head>
           <link rel="icon" href="/logo.png" sizes="any" />
         </head> */}
-        <body className={`${inter.className}`}>
+        <body className={`${inter.className} min-h-screen bg-stone-50`}>
           <Header />
-          <main className="min-h-screen">{children}</main>
-          <Toaster richColors/>
-
-          {/* Footer */}
-          <footer className="py-8 px-4 border-t">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/logo.png"
-                  alt="Servd Logo"
-                  width={48}
-                  height={48}
-                  className="w-14"
-                />
-              </div>
-              <p className="text-stone-500 text-sm">
-                Made with 💗 by RoadsideCoder
-              </p>
-            </div>
-          </footer>
+          <div className="flex min-h-screen flex-col">
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+          <Toaster richColors />
         </body>
       </html>
     </ClerkProvider>

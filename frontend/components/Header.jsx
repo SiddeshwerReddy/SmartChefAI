@@ -14,9 +14,25 @@ const Header = async() => {
   const user=await checkUser();
   return (
     <header className="fixed top-0 w-full border-b border-stone-200 bg-stone-50/80 backdrop-blur-md z-50 supports-backdrop-filter:bg-stone-50/60">
-      <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href={user?'/dashboard':'/'}>
-          <Image src="/orange-logo.png" alt="Servd Logo" width={60} height={60} className="w-16" />
+      <nav className="container mx-auto flex h-20 items-center justify-between px-4">
+        <Link href={user?'/dashboard':'/'} className="flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-orange-200 bg-white shadow-sm md:h-14 md:w-14">
+            <Image
+              src="/orange-logo.png"
+              alt="SmartChefAI Logo"
+              width={112}
+              height={112}
+              className="h-8 w-8 object-contain md:h-10 md:w-10"
+            />
+          </div>
+          <div className="hidden sm:block">
+            <p className="text-base font-black leading-none tracking-tight text-stone-900 md:text-lg">
+              SmartChefAI
+            </p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-orange-600">
+              Cook smarter
+            </p>
+          </div>
         </Link>
         {/* Navigation Links */}
         <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-600">
